@@ -26,5 +26,17 @@ function findMinAndRemove(array){
 }
 
 function selectionSort(array){
+  // use findMinAndRemove to get the min and push it into a new, empty array to get a sorted array
+  let arrayLength = array.length;
+  let sortedArr = [];
 
+  for (let i = 0; i < arrayLength; i++) {
+    let newMin = findMinAndRemove(array);
+        console.log(newMin)
+
+    console.log(array)
+    sortedArr.push(newMin);
+  }
+
+  return sortedArr
 }
